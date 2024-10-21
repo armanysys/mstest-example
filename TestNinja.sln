@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNinja", "TestNinja\Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MstestExample.UnitTest", "MstestExample.UnitTest\MstestExample.UnitTest.csproj", "{7B6ED30E-0448-45E3-B9DF-CA13903CE6BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTesting", "XUnitTesting\XUnitTesting.csproj", "{8E07EF68-957A-4560-98D0-A2087A634E70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChubbTestingXUnit", "ChubbTestingXUnit\ChubbTestingXUnit.csproj", "{02536B25-8823-4878-AA76-195434C75AFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{7B6ED30E-0448-45E3-B9DF-CA13903CE6BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B6ED30E-0448-45E3-B9DF-CA13903CE6BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B6ED30E-0448-45E3-B9DF-CA13903CE6BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E07EF68-957A-4560-98D0-A2087A634E70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E07EF68-957A-4560-98D0-A2087A634E70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E07EF68-957A-4560-98D0-A2087A634E70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E07EF68-957A-4560-98D0-A2087A634E70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02536B25-8823-4878-AA76-195434C75AFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02536B25-8823-4878-AA76-195434C75AFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02536B25-8823-4878-AA76-195434C75AFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02536B25-8823-4878-AA76-195434C75AFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
