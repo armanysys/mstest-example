@@ -1,19 +1,15 @@
 ﻿
 
-using ChubbTestingXUnit;
-using System.Net.Mail;
-using System.Net.NetworkInformation;
-using System.Threading;
-using System.Xml.Linq;
+using ChubbTestingXUnit; 
 
 namespace XUnitTesting
 {
     public class MailValidatiorShould
-    { 
-    // Naming convention in every test method has three parts:
-    // 1. Name of the method being tested
-    // 2. Scenario being tested
-    // 3. Expected behavior 
+    {
+        // Naming convention in every test method has three parts:
+        // 1. Name of the method being tested
+        // 2. Scenario being tested
+        // 3. Expected behavior 
         [Fact]
         public void IsValidEmail_ValidEmail_ReturnTrue()
         {
@@ -35,7 +31,7 @@ namespace XUnitTesting
             // AAA pattern is a common approach in unit testing that helps structure tests.
             // Arrange: Set up the necessary conditions and inputs for the test.
             var mailvalidator = new MailValidator();
-            string emailaddress = "invalid.invalid@invalid.com";
+            string emailaddress = "invalid.invalid@invalid";
 
             // Act: Execute the operation or method being tested.
             bool isvalid = mailvalidator.IsValidEmail(emailaddress);
@@ -44,22 +40,22 @@ namespace XUnitTesting
             Assert.False(isvalid, $"{emailaddress} is not valid.");
         }
 
-       // // Permite hacer data driven testing
-       //[Theory]
-       //[InlineData("invalid@invalid.invalid", false)]
-       //[InlineData("armando.antonio@chubb.com", true)]
-       // public void ValidateValidEmails(string emailAddress, bool expected)
-       // {
-       //     // Pattern AAA
-       //     // Arrange - Define all variables we use
-       //     var mailValidator = new MailValidator();
+        //// Permite hacer data driven testing
+        //[Theory]
+        //[InlineData("invalid@invalid.invalid", false)]
+        //[InlineData("armando.antonio@chubb.com", true)]
+        //public void ValidateValidEmails(string emailAddress, bool expected)
+        //{
+        //    // Pattern AAA
+        //    // Arrange - Define all variables we use
+        //    var mailValidator = new MailValidator();
 
-       //     // Act  - All I declared in arragne, we use in Act
-       //     bool isValid = mailValidator.IsValidaEmail(emailAddress);
+        //    // Act  - All I declared in arragne, we use in Act
+        //    bool isValid = mailValidator.IsValidEmail(emailAddress);
 
-       //     // Assert - Has static method... Verifica que IsValid is true
-       //     Assert.Equal(expected, isValid);
-       // }
+        //    // Assert - Has static method... Verifica que IsValid is true
+        //    Assert.Equal(expected, isValid);
+        //}
 
         [Theory]
         [InlineData("spam@gmail.com", "INBOX")]
@@ -72,7 +68,7 @@ namespace XUnitTesting
             // Act
             string result = mailValidator.IsSpam(emailAddress);
 
-            // Act
+            // Assert
             Assert.Equal(expected, result);
         }
 
@@ -84,8 +80,8 @@ namespace XUnitTesting
 
             // Act
 
-            // Act
-            Assert.Throws<EmailNotProvidedException>(() => mailValidator.IsValidaEmail(null));
+            // Assert
+            Assert.Throws<EmailNotProvidedException>(() => mailValidator.IsValidEmail(null));
         }
     }
 }
