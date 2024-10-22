@@ -11,3 +11,17 @@
 /Users/moshfeghhamedani/RiderProjects/TestNinja/TestNinja/bin/Debug/EntityFramework.xml
 /Users/moshfeghhamedani/RiderProjects/TestNinja/TestNinja/bin/Debug/EntityFramework.SqlServer.xml
 /Users/moshfeghhamedani/RiderProjects/TestNinja/TestNinja/bin/Debug/Newtonsoft.Json.xml
+D:\Documentos\git\TestNinja\TestNinja\bin\Debug\TestNinja.dll.config
+D:\Documentos\git\TestNinja\TestNinja\bin\Debug\TestNinja.dll
+D:\Documentos\git\TestNinja\TestNinja\bin\Debug\TestNinja.pdb
+D:\Documentos\git\TestNinja\TestNinja\bin\Debug\EntityFramework.dll
+D:\Documentos\git\TestNinja\TestNinja\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documentos\git\TestNinja\TestNinja\bin\Debug\Newtonsoft.Json.dll
+D:\Documentos\git\TestNinja\TestNinja\bin\Debug\EntityFramework.xml
+D:\Documentos\git\TestNinja\TestNinja\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documentos\git\TestNinja\TestNinja\bin\Debug\Newtonsoft.Json.xml
+D:\Documentos\git\TestNinja\TestNinja\obj\Debug\TestNinja.csproj.AssemblyReference.cache
+D:\Documentos\git\TestNinja\TestNinja\obj\Debug\TestNinja.csproj.CoreCompileInputs.cache
+D:\Documentos\git\TestNinja\TestNinja\obj\Debug\TestNinja.csproj.Up2Date
+D:\Documentos\git\TestNinja\TestNinja\obj\Debug\TestNinja.dll
+D:\Documentos\git\TestNinja\TestNinja\obj\Debug\TestNinja.pdb

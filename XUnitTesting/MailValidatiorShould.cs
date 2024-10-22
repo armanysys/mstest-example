@@ -17,30 +17,30 @@ namespace XUnitTesting
         [Fact]
         public void IsValidEmail_ValidEmail_ReturnTrue()
         {
-            // pattern aaa
-            // arrange - define all variables we use
+            // AAA pattern is a common approach in unit testing that helps structure tests.
+            // Arrange: Set up the necessary conditions and inputs for the test.
             var mailvalidator = new MailValidator();
             string emailaddress = "armando.antonio@gmail.com";
 
-            // act  - all i declared in arragne, we use in act
+            // Act: Execute the operation or method being tested.
             bool isvalid = mailvalidator.IsValidEmail(emailaddress);
 
-            // assert - has static method... verifica que isvalid is true
+            // Assert: Verify that the outcome matches the expected result.
             Assert.True(isvalid, $"{emailaddress} is not valid.");
         }
 
         [Fact]
         public void IsValidEmail_InValidEmail_ReturnFalse()
         {
-            // pattern aaa
-            // arrange - define all variables we use
+            // AAA pattern is a common approach in unit testing that helps structure tests.
+            // Arrange: Set up the necessary conditions and inputs for the test.
             var mailvalidator = new MailValidator();
             string emailaddress = "invalid.invalid@invalid.com";
 
-            // act  - all i declared in arragne, we use in act
+            // Act: Execute the operation or method being tested.
             bool isvalid = mailvalidator.IsValidEmail(emailaddress);
 
-            // assert - has static method... verifica que isvalid is true
+            // Assert: Verify that the outcome matches the expected result.
             Assert.False(isvalid, $"{emailaddress} is not valid.");
         }
 
