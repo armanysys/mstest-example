@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using System.Text.RegularExpressions;
 
 namespace ChubbTestingXUnit
 {
     public class MailValidator
     {
-        public bool IsValidaEmail(String emailAddress)
+        public bool IsValidEmail(String emailAddress)
         {
             if (string.IsNullOrEmpty(emailAddress))
                 throw new EmailNotProvidedException();
