@@ -13,6 +13,29 @@ namespace ChubbTestingXUnit
             _db = db ?? throw new ArgumentNullException(nameof(db));
         }
 
+        // Method to save an employee
+        public ActionResult SaveEmployee(Employee employee)
+        {
+            // If the employee ID is 0, add the employee to the database
+            if (employee.Id == 0)
+                _db.Employees.Add(employee);
+            else
+            {
+                // Otherwise, update the existing employee
+                var employeeInDb = _db.Employees.Find(employee.Id);
+                if (employeeInDb == null)
+                    return new NotFoundResult();
+
+                employeeInDb.Name = employee.Name;
+                // Add other properties as needed
+            }
+
+            // Save changes to the database
+            _db.SaveChanges();
+            // Redirect to the "Employees" action
+            return RedirectToAction("Employees");
+        }
+
         // Method to delete an employee by ID
         public ActionResult DeleteEmployee(int id)
         {

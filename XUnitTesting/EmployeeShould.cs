@@ -67,5 +67,80 @@ namespace XUnitTesting
             // Verify that SaveChanges was never called
             _mockContext.Verify(c => c.SaveChanges(), Times.Never);
         }
+
+        [Fact]
+        public void SaveEmployee_NewEmployee_AddsEmployee()
+        {
+            // Arrange
+            // Create a sample employee with ID 0 (new employee)
+            var employee = new Employee { Id = 0, Name = "Jane Doe" };
+            // Create a mock DbSet for employees
+            var mockSet = new Mock<DbSet<Employee>>();
+            // Set up the mock context to return the mock DbSet
+            _mockContext.Setup(c => c.Employees).Returns(mockSet.Object);
+
+            // Act
+            // Call the SaveEmployee method
+            var result = _controller.SaveEmployee(employee);
+
+            // Assert
+            // Verify that the result is a RedirectResult
+            Assert.IsType<RedirectResult>(result);
+            // Verify that Add was called once with the sample employee
+            _mockContext.Verify(c => c.Employees.Add(employee), Times.Once);
+            // Verify that SaveChanges was called once
+            _mockContext.Verify(c => c.SaveChanges(), Times.Once);
+        }
+
+        [Fact]
+        public void SaveEmployee_ExistingEmployee_UpdatesEmployee()
+        {
+            // Arrange
+            // Create a sample employee with an existing ID
+            var employee = new Employee { Id = 1, Name = "Jane Doe" };
+            // Create a mock DbSet for employees
+            var mockSet = new Mock<DbSet<Employee>>();
+            // Set up the mock to return the sample employee when Find is called
+            mockSet.Setup(m => m.Find(It.IsAny<int>())).Returns(employee);
+            // Set up the mock context to return the mock DbSet
+            _mockContext.Setup(c => c.Employees).Returns(mockSet.Object);
+
+            // Act
+            // Call the SaveEmployee method
+            var result = _controller.SaveEmployee(employee);
+
+            // Assert
+            // Verify that the result is a RedirectResult
+            Assert.IsType<RedirectResult>(result);
+            // Verify that SaveChanges was called once
+            _mockContext.Verify(c => c.SaveChanges(), Times.Once);
+        }
+
+        [Fact]
+        public void SaveEmployee_EmployeeDoesNotExist_ReturnsNotFoundResult()
+        {
+            // Arrange
+            // Create a sample employee with an existing ID
+            var employee = new Employee { Id = 1, Name = "Jane Doe" };
+            // Create a mock DbSet for employees
+            var mockSet = new Mock<DbSet<Employee>>();
+            // Set up the mock to return null when Find is called
+            mockSet.Setup(m => m.Find(It.IsAny<int>())).Returns((Employee)null);
+            // Set up the mock context to return the mock DbSet
+            _mockContext.Setup(c => c.Employees).Returns(mockSet.Object);
+
+            // Act
+            // Call the SaveEmployee method
+            var result = _controller.SaveEmployee(employee);
+
+            // Assert
+            // Verify that the result is a NotFoundResult
+            Assert.IsType<NotFoundResult>(result);
+            // Verify that Add was never called
+            _mockContext.Verify(c => c.Employees.Add(It.IsAny<Employee>()), Times.Never);
+            // Verify that SaveChanges was never called
+            _mockContext.Verify(c => c.SaveChanges(), Times.Never);
+        }
+
     }
 }
