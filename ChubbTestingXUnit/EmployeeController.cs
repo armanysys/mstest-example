@@ -2,7 +2,7 @@
 
 namespace ChubbTestingXUnit
 {
-    public class EmployeeController
+    public class EmployeeController 
     {
         private readonly IEmployeeContext _db;
 
@@ -58,7 +58,7 @@ namespace ChubbTestingXUnit
         private ActionResult RedirectToAction(string actionName)
         {
             // Return a new RedirectResult with the specified action name
-            return new RedirectResult(actionName);
+            return new RedirectResult();
         }
     }
 
@@ -75,33 +75,10 @@ namespace ChubbTestingXUnit
     public class ActionResult { }
 
     // RedirectResult class inheriting from ActionResult
-    public class RedirectResult : ActionResult
-    {
-        // Property to hold the action name
-        public string ActionName { get; }
-
-        // Constructor to initialize the action name
-        public RedirectResult(string actionName)
-        {
-            ActionName = actionName;
-        }
-    }
-
+    public class RedirectResult : ActionResult { }
+    
     // NotFoundResult class inheriting from ActionResult
     public class NotFoundResult : ActionResult { }
-
-    // EmployeeContext class implementing IEmployeeContext
-    public class EmployeeContext : DbContext, IEmployeeContext
-    {
-        // Property representing the Employees table
-        public DbSet<Employee> Employees { get; set; }
-
-        // Method to save changes to the database
-        public void SaveChanges()
-        {
-            base.SaveChanges();
-        }
-    }
 
     // Employee entity class
     public class Employee
