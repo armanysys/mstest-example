@@ -1,4 +1,4 @@
-﻿using ChubbTestingXUnit.Logger;
+﻿using ChubbTestingXUnit;
 using Microsoft.Extensions.Options;
 using Moq;
 

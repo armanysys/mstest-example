@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChubbTestingXUnit.Logger
+namespace ChubbTestingXUnit
 {
     public class DatabaseConfiguration
     {
