@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNinja", "TestNinja\TestNinja.csproj", "{7328740E-4B78-464F-8352-65D887F2145F}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTesting", "XUnitTesting\XUnitTesting.csproj", "{8E07EF68-957A-4560-98D0-A2087A634E70}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChubbTestingXUnit", "ChubbTestingXUnit\ChubbTestingXUnit.csproj", "{02536B25-8823-4878-AA76-195434C75AFB}"
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7328740E-4B78-464F-8352-65D887F2145F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7328740E-4B78-464F-8352-65D887F2145F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7328740E-4B78-464F-8352-65D887F2145F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7328740E-4B78-464F-8352-65D887F2145F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8E07EF68-957A-4560-98D0-A2087A634E70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8E07EF68-957A-4560-98D0-A2087A634E70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E07EF68-957A-4560-98D0-A2087A634E70}.Release|Any CPU.ActiveCfg = Release|Any CPU
